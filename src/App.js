@@ -1,10 +1,11 @@
 import React, {useEffect} from 'react';
 import Img from './img/logo.png';
 import DemoComp from './components/DemoComp';
+
 function App() {
   const env = process.env.NODE_ENV;
   useEffect(() => {
-    document.title = "Welcome to my Demo"
+    document.title = "Demo page"
  }, []);
   return (
     <main>
