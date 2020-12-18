@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import favicons from './favicons'
 import App from './App';
 import './css/styles.css'
 import './css/styles.scss'
