@@ -9,4 +9,4 @@ What the webpack contains
 * SCSS/Sass Support
 * JSX support (now you dont need .jsx)
 * JS support (Same as above)
-* Image and Font support
+* Image/Favicon and Font support
