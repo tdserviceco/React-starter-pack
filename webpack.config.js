@@ -6,7 +6,8 @@ const Webpack = require('webpack');
 module.exports = {
   output: {
     path: path.resolve(__dirname, "build"),
-    filename: 'app.js'
+    filename: 'app.js',
+    publicPath: '/'
   },
   module: {
     rules: [
