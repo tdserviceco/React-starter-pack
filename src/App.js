@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import Img from './img/logo.png';
-import DemoComp from './components/DemoComp';
+import DemoComp from './components/DemoComp'; // Demo purpose only
 
 function App() {
   const env = process.env.NODE_ENV;
