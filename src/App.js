@@ -7,6 +7,7 @@ function App() {
   useEffect(() => {
     document.title = "Demo page"
  }, []);
+
   return (
     <main>
       <h1>Helloworld</h1>
