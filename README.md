@@ -6,6 +6,8 @@ Then you type: `npm start` once `npm i` part is done. This will start server and
 
 Once you are done with the project, use `npm build` to get the "production/staging" page.
 
+Once an error is resolved.. you need to manually reload the page.
+
 What the webpack contains
 ***
 * SCSS/Sass Support
