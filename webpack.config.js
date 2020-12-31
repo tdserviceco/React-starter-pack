@@ -59,7 +59,7 @@ module.exports = {
     new MiniCssExtractPlugin(),
     new Webpack.DefinePlugin({
       "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
-      //Here you can more process.env.*what-ever-you-name-them*
+      //Here you can more process.env.*what-ever-you-name-them : JSON.stringify('String enters here')*
     }),
   ],
   devServer: {
