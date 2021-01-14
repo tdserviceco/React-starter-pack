@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack serve",
-    "build": "cross-env NODE_ENV=production webpack"
+    "build": "cross-env NODE_ENV=production webpack",
+    "live": "npm run build && node server"
   },
   "keywords": [],
   "author": "",
@@ -33,14 +34,13 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "axios": "^0.21.0",
+    "express": "^4.17.1",
+    "express-favicon": "^2.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-numeric-input": "^2.2.3",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3",
-    "socket.io": "^2.3.0",
-    "socket.io-client": "^2.3.0"
+    "react-scripts": "3.4.3"
   }
 }
