@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack serve",
-    "build": "cross-env NODE_ENV=production webpack",
-    "live": "npm run build && node server"
+    "build": "cross-env NODE_ENV=production webpack"
   },
   "keywords": [],
   "author": "",
