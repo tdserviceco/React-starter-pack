@@ -1,20 +1,36 @@
-import React, {useEffect} from 'react';
-import Img from './img/logo.png';
-import DemoComp from './components/DemoComp'; // Demo purpose only
+import React, { useEffect, useState } from 'react';
+import Pokedex from './components/Pokedex';
+import Axios from 'axios';
+
 
 function App() {
-  const env = process.env.NODE_ENV;
+  const
+    [loading, updateLoading] = useState(true),
+    [pokemons, updatePokemons] = useState(''),
+    [nextPokemons, updateNextPokemons] = useState(''),
+    [prevPokemons, updatePrevPokemons] = useState('');
+
+
+
+  const getPokemons = async () => {
+    let data = await Axios.get('https://pokeapi.co/api/v2/pokemon/?limit=3');
+    return await data;
+  }
+
   useEffect(() => {
-    document.title = "Demo page"
- }, []);
+    updateLoading(false)
+    getPokemons().then(res => {
+      updateNextPokemons(res.data.next);
+      updatePokemons(res.data.results.map(pokemons => pokemons.name));
+    })
+    // onClick={() => props.title('Pokedex - new pokemon')}
+    document.title = 'Pokedex';
+  }, []);
+
 
   return (
     <main>
-      <h1>Helloworld</h1>
-      <p>Demo text from ReactJS</p>
-      <em>Your using: {env}</em>
-      <img src={Img} alt="reactJS" />
-      <DemoComp text="Comp" />
+      <Pokedex updateNextPokemons={updateNextPokemons} loading={loading} nextPokemons={nextPokemons} updatePokemons={updatePokemons} prevPokemons={prevPokemons} updatePrevPokemons={updatePrevPokemons} pokemons={pokemons} />
     </main>
   )
 }

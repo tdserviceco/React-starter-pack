@@ -49,6 +49,10 @@ module.exports = {
     ]
   },
   resolve: {
+    fallback: { "os": require.resolve("os-browserify/browser") },
+    alias: {
+      path: require.resolve("path-browserify")
+    },
     extensions: ['*', '.js', '.jsx'],
   },
   plugins: [
