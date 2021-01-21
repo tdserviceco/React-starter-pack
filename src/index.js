@@ -5,6 +5,11 @@ import App from './App';
 import './css/styles.css'; //Remove this (its only for demo, we will use SCSS instead here)
 import './css/styles.scss';
 
+// Redux + Redux tools for chrome/edge
+// homepage: https://github.com/zalmoxisus/redux-devtools-extension
+// const store = createStore(allReducer,
+//   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
