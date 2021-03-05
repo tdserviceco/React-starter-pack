@@ -1,8 +1,11 @@
-@import './reset.scss';
-$color: yellow;
-html {
-  background: $color;
-  p {
-    color: green;
+@import "./reset.scss";
+@import "./variables.scss";
+#root {
+  min-height: 100vh;
+  h1 {
+    //Mixin from variables.scss
+    @include demo;
+    //function from variables.scss
+    height: returnCalc(100%, 3rem);
   }
 }
