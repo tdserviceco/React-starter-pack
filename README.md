@@ -18,6 +18,8 @@ What the webpack contains
 
 Minor warning:
 ***
+If you dont have npm-check-updates (global) installed.. do not use the script "check".
+
 If you get `'cross-env' is not recognized as an internal or external command,
 operable program or batch file.` then use these commands to "fix" it.
 `rm -rf node_modules && rm package-lock.json && npm cache clear --force && npm i && npm start`
